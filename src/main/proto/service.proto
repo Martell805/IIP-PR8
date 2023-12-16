@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message UserData {
+  string username = 1;
+  string password = 2;
+}
+
+message StringResponse {
+  string response = 1;
+}
+
+service UserDataService {
+  rpc Register(UserData) returns (StringResponse);
+  rpc Login(UserData) returns (StringResponse);
+}
